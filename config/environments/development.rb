@@ -68,7 +68,7 @@ config.action_mailer.smtp_settings = {
   authentication: "plain",
   enable_starttls_auto: true,
   user_name: 'agent.mag.2019@gmail.com',
-  password: 'agent2019'
+  password: '*******'
 }
 
 config.action_cable.allowed_request_origins = [ /http:\/\/.*/, /https:\/\/.*/ ]
