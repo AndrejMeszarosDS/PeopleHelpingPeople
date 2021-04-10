@@ -1,0 +1,10 @@
+development:
+  adapter: async
+
+test:
+  adapter: async
+
+production:
+  adapter: redis
+  url: redis://redistogo:e9fb97dc4016eca31fe45c52ee06c30e@spinyfin.redistogo.com:9120/
+  channel_prefix: PHP8_production

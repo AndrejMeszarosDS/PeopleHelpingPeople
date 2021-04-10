@@ -1,0 +1,241 @@
+body,
+html,
+.App,
+.home,
+#root {
+  height: 100%;
+}
+/* --- navbar ------------------------------------------------------------------ */
+.Navbar {
+  height: 61px;
+}
+/* --- logged out backgroud ---------------------------------------------------- */
+.logged_out_background {
+  overflow: hidden;
+  background-size: cover;
+  background-position: top;
+  background-image: url("./bg_desktop.png");
+  height: calc(100vh - 61px);
+  width: 100%;
+  position: absolute;
+}
+
+@media only screen and (max-width: 600px) {
+  .logged_out_background {
+    background-image: url("./bg_mobile.png");
+    height: calc(100vh - 61px);
+  }
+}
+/* --- map in profile form ---------------------------------------------------- */
+.mapSelectHome-box {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #4679bd;
+}
+.mapSelectHome-box:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.mapSelectHome-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: white;
+}
+/* --- map in main form ---------------------------------------------------- */
+#mapWithMarkers {
+  position: absolute;
+  top: 61px;
+  left: 0px;
+  width: 100vw;
+  height: calc(100vh - 61px);
+  z-index: 0;
+}
+#mapWithMarkers.full {
+  width: 100vw;
+}
+
+#mapWithMarkers.nofull {
+  width: calc(100% - 400px);
+}
+/* --- legend image in map in main form ---------------------------------------------------- */
+.legendImage {
+  position: absolute;
+  bottom: 100px;
+  left: 5px;
+  width: 500px;
+}
+
+@media only screen and (max-width: 600px) {
+  .legendImage {
+    bottom: 80px;
+    width: 300px;
+  }
+}
+
+/* --- buttons and labels on map ----------------------------------------------------*/
+
+.addRequestButton {
+  position: absolute;
+  top: 60px;
+  left: 10px;
+}
+
+.conversationButton {
+  position: absolute;
+  top: 120px;
+  left: 10px;
+}
+
+.newMessagesLabel {
+  position: absolute;
+  top: 180px;
+  left: 10px;
+  background-color: #21ba45 !important;
+}
+
+.requestCount {
+  position: absolute;
+  top: 230px;
+  left: 10px;
+  background-color: #21ba45 !important;
+}
+
+/* --- conversationsForm form ------------------------------------------------------------ */
+.conversations {
+  background-color: rgb(153, 212, 162);
+  position: absolute;
+  top: 0px;
+  right: -400px;
+  width: 400px;
+  height: calc(100vh - 61px);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .conversations {
+    width: 100vw;
+    height: calc(100vh - 61px);
+    left: 0px;
+  }
+}
+
+.conversations-header {
+  flex: 0 0 auto;
+}
+
+.conversations-content {
+  flex: 1 1 auto;
+  position: relative;
+  overflow-y: auto;
+  background-color: #ace0b8;
+}
+
+/* --- SendMessageForm form -------------------------------------------------------- */
+.sendMessage {
+  background-color: rgb(153, 212, 162);
+  position: absolute;
+  top: 0px;
+  right: -400px;
+  width: 400px;
+  height: calc(100vh - 61px);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .sendMessage {
+    width: 100vw;
+    height: calc(100vh - 61px);
+    left: 0px;
+  }
+}
+
+.sendMessage-header {
+  flex: 0 0 auto;
+}
+
+.sendMessage-content {
+  flex: 1 1 auto;
+  position: relative;
+  overflow-y: auto;
+}
+
+.sendMessage-footer {
+  flex: 0 0 auto;
+}
+
+/* --- messages in send message form --------------------------------------------------------- */
+.messageList {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.messageList > :last-child {
+  margin-top: auto !important;
+}
+
+/* --- sidebar ----------------------------------------------------------------------------- */
+#flyoutMenu {
+  width: 80vw;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  top: 61px;
+  left: 0;
+  transition: transform 0.6s cubic-bezier(0, 0.52, 0, 1);
+  overflow: scroll;
+  z-index: 1000;
+}
+
+#flyoutMenu.hide {
+  transform: translate3d(-100vw, 0, 0);
+}
+
+#flyoutMenu.show {
+  transform: translate3d(0vw, 0, 0);
+  overflow: hidden;
+}
+
+#flyoutMenu h2 a {
+  color: #333;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+#flyoutMenu h2 a:hover {
+  text-decoration: underline;
+}
+
+/* --- user related modal forms ------------------------------------------------------------------- */
+
+.modalHeader {
+  background-color: #0f7dd8 !important;
+  color: #ffffff !important;
+}
+.modalContent {
+  background-color: #ffffff !important;
+}
+.modalActions {
+  background-color: #ffffff !important;
+}
+
+.infoWindowMeta {
+  color: #333 !important;
+  font-style: italic;
+}
+
+.label-detail {
+  font-weight: 100 !important;
+}
