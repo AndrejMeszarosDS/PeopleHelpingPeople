@@ -102,7 +102,7 @@ config.action_mailer.smtp_settings = {
   :authentication => :plain,
   :user_name      => 'am72',
   :password       => 'sendgrid2015',
-  :domain         => 'heroku.com',
+  :domain         => '********',
   :enable_starttls_auto => true
 }
 
